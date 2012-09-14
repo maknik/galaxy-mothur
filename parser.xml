@@ -1,0 +1,14 @@
+<tool id="row_remove" name="Get data from logfile">
+        <command interpreter="python">
+                parser.py $input1 $number $remove_header_row $output
+        </command>
+        <inputs>
+        <param type="data" format="html" name="input1" label="Logfile"/>
+	<param name="number" type="integer" value="1" label="Dataset number on the list in logfile (Default 1)"/>
+	<param name="remove_header_row" type="boolean" truevalue="yes" falsevalue="no" checked="true" label="Remove header row from file"/>
+        </inputs>
+        <outputs>
+        <data name="output" format="tabular" />
+        </outputs>
+</tool>
+

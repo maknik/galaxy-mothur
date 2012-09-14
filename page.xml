@@ -1,0 +1,17 @@
+<tool id="create_page" name="Create page">
+        <command interpreter="python">
+                page.py $input1 $input2 $input3 $input4 $input6 $input7 $input8 $output $output.extra_files_path
+        </command>
+        <inputs> 
+        <param type="data" format="html" name="input1" label="Summary of data"/>
+	<param type="data" format="html" name="input2" label="Summary of data after Remove.seqs"/>
+	<param type="data" format="svg" name="input3" label="Phylogenetic Tree"/>
+	<param type="data" format="text" name="input4" label="Sequence Taxonomy"/>
+	<param type="data" format="text" name="input6" label="OTUs Tax.summary"/>
+	<param type="data" format="pdf" name="input7" label="Rarefaction curve"/>
+	<param type="data" format="text" name="input8" label="Summary.single"/>
+        </inputs>
+        <outputs>
+        <data format="html" name="output" label="Page from analysis"/>
+        </outputs>
+</tool>
